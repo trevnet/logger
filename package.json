@@ -1,0 +1,15 @@
+{
+  "name": "logger",
+  "version": "1.0.0",
+  "description": "Simple node logger",
+  "main": "logger.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/trevnet/logger.git"
+  },
+  "bin": {
+    "logger": "logger.js"
+  },
+  "author": "Trever Hixson",
+  "license": "ISC",
+}
