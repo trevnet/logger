@@ -24,7 +24,10 @@ module.exports.custom = function(color,heading,msg,showLineInfo){
 	}
 	var lineInfo = "";
 	if(showLineInfo){
-		var info = getInfo();
+		var info = getInfo(1);
+		if(info.file.indexOf('/yeller/yeller.js') >= 0){
+			info = getInfo(2);
+		}
 		lineInfo += this.colors.CYAN + " (" + info.file + ":" + info.line + ")";
 	}
 	console.log(color + heading + lineInfo + msgInfo);
@@ -47,7 +50,7 @@ module.exports.debug = function(msg){
 }
 
 var loggerError = function(msg){
-	var info = getInfo();
+	var info = getInfo(1);
 	var lineInfo = module.exports.colors.CYAN + " (" + info.file + ":" + info.line + ")";
 	console.log(module.exports.colors.RED + "LOGGER ERROR" + lineInfo + ": " + module.exports.colors.RESET + msg);
 }
@@ -59,7 +62,7 @@ function convertMessage(msg){
 	return msg;
 }
 
-function getInfo(){
+function getInfo(lineNumber){
 	var orig = Error.prepareStackTrace;
 	Error.prepareStackTrace = function(_, stack){ return stack; };
 	var err = new Error;
@@ -67,7 +70,7 @@ function getInfo(){
 	var stack = err.stack;
 	Error.prepareStackTrace = orig;
 	return {
-		line:stack[1].getLineNumber(),
-		file:stack[1].getFileName()
+		line:stack[lineNumber].getLineNumber(),
+		file:stack[lineNumber].getFileName()
 	}
 }
