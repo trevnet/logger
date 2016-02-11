@@ -1,16 +1,16 @@
-# logger
+# Yeller
 
 ### Installation
 
-npm install --save git+https://github.com/trevnet/logger.git
+npm install yeller
 
 ### Usage
-	
-	var logger = require('logger');
 
-	logger.info()
-	logger.warn()
-	logger.error()
-	logger.debug()
+	var yeller = require('yeller');
+
+	yeller.info()
+	yeller.warn()
+	yeller.error()
+	yeller.debug()
 
 Accepts an object or a string

@@ -1,11 +1,11 @@
 {
-  "name": "logger",
+  "name": "yeller",
   "version": "1.0.0",
   "description": "Simple node logger",
-  "main": "logger.js",
+  "main": "yeller.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/trevnet/logger.git"
+    "url": "https://github.com/trevnet/yeller.git"
   },
   "author": "Trever Hixson",
   "license": "ISC"
