@@ -73,7 +73,7 @@ function printMessage(color,heading,msg,showLineInfo){
 	var lineInfo = "";
 	if(showLineInfo){
 		var date = new Date();
-		var dateString = date.getMonth() + "/" + date.getDay() + "/" + date.getFullYear() + " " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+		var dateString = (date.getMonth() + 1) + "/" + date.getDate() + "/" + date.getFullYear() + " " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
 		var info = getInfo(1);
 		if(info.file.indexOf('/yeller/yeller.js') >= 0){
 			info = getInfo(2);
