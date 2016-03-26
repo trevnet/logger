@@ -3,6 +3,7 @@ module.exports.colors = {
 	GREEN:"\x1b[32m",
 	YELLOW:"\x1b[33m",
 	CYAN:"\x1b[36m",
+	BLUE:"\x1b[94m",
 	RESET:"\x1b[0m"
 };
 
@@ -25,7 +26,7 @@ module.exports.error = function(msg){
 }
 
 module.exports.debug = function(msg){
-	printMessage(colors.RED,"DEBUG",msg,true);
+	printMessage(colors.BLUE,"DEBUG",msg,true);
 }
 
 var loggerError = function(msg){
@@ -36,7 +37,7 @@ var loggerError = function(msg){
 
 function convertMessage(msg){
 	if(typeof msg == 'object'){
-		msg = JSON.stringify(msg);
+		msg = colors.YELLOW+"Object:\n"+colors.RESET+ JSON.stringify(msg,null,'  ');
 	}
 	return msg;
 }
