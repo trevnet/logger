@@ -1,6 +1,6 @@
 {
   "name": "yeller",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Simple node logger",
   "main": "yeller.js",
   "repository": {
