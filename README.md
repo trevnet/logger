@@ -1,14 +1,12 @@
 # Yeller
 
 ### Installation
-
+```
 npm install yeller
-
+```
 ### Usage
 
-	var yeller = require('yeller');
-
-```
+```javascript
 var yeller = require("../yeller");
 
 //Log Levels
@@ -53,5 +51,3 @@ yeller.custom(yeller.colors.CYAN,"CustomHeading","This is a custom message with 
 yeller.custom(yeller.colors.RED,"****CUSTOM HEADING AND NOTHING ELSE****")
 yeller.custom(yeller.colors.UNKNOWNCOLOR,"INCORRECT COLOR") // throws error expects color from yeller.colors
 ```
-
-Accepts an object or a string
