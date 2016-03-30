@@ -149,7 +149,7 @@ function printMessage(color,heading,msg,showLineInfo){
 		if(info.file.indexOf('/yeller/yeller.js') >= 0){
 			info = getInfo(2);
 		}
-		lineInfo += c.RESET + c.CYAN + " (" + info.file + ":" + info.line + " - " + dateString + ")";
+		lineInfo += c.RESET + " " + c.MAGENTA + dateString + c.CYAN + " (" + info.file + ":" + info.line + ")";
 	}
 	console.log(color + heading + lineInfo + msgInfo);
 }
