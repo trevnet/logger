@@ -74,7 +74,7 @@ module.exports.custom = function(color,heading,msg,showLineInfo){
 
 module.exports.log = function(obj){
 	printMessage(
-		obj.color ? c[obj.color] : c.GREEN,
+		obj.color || c.GREEN,
 		obj.heading || "LOG",
 		obj.msg || "",
 		obj.showLineInfo || true
