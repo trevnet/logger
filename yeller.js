@@ -77,7 +77,7 @@ module.exports.log = function(obj){
 		obj.color || c.GREEN,
 		obj.heading || "LOG",
 		obj.msg || "",
-		obj.showLineInfo || true
+		typeof obj.showLineInfo === 'boolean'?obj.showLineInfo:true
 	);
 }
 
